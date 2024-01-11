@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #FF5F6D, #FFC371);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+}
+.btn-primary {
+    background: linear-gradient(to right, #FF5F6D, #FFC371);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #FFC371, #FF5F6D);
+}
+
+.testimonials {
+    background-color: #f8f8f8; /* Light background for the testimonials section */
+}
+
+.testimonial-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    border: none; /* Remove default card border */
+}
+
+.testimonial-card .card-img-top {
+    height: 200px; /* Set a fixed height for image consistency */
+    object-fit: cover; /* Ensure images cover the card image area */
+}
+
+.testimonial-card .card-body {
+    padding: 1.25rem; /* Padding inside the card */
+}
+
+.testimonial-card .card-title {
+    font-size: 1.1rem; /* Title font size */
+    margin-bottom: 0.75rem; /* Space below the title */
+}
+
+.testimonial-card .card-text {
+    font-size: 0.9rem; /* Text font size */
+    font-style: italic; /* Italicize the testimonial text */
+    color: #555; /* Dark grey color for the text */
+}

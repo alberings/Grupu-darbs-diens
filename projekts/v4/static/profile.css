@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #FF5F6D, #FFC371);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+}
+.profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.welcome-banner, .user-info, .weekly-menu, .profile-actions {
+    background-color: #ffffff3c;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-banner {
+    background-color: #ffffff16;
+    color: white;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.user-info p, .weekly-menu h2, .weekly-menu p, .profile-actions a {
+    margin: 10px 0;
+}
+
+.user-info {
+    background-color: #ffffff36;
+}
+
+.weekly-menu {
+    background-color: #ffffff50;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.edit-profile-btn {
+    background-color: #6ce0005a;
+    color: white;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.card {
+    background: #b30c0c14;
+    border: 1px solid #dddddd;
+    border-radius: 0.25rem;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.card-body h3 {
+    color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 10px;
+    }
+
+    .welcome-banner, .user-info, .weekly-menu, .profile-actions {
+        padding: 15px;
+    }
+}
+.menu_plan_button {
+    background: linear-gradient(to right, #FF5F6D, #FFC371);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}

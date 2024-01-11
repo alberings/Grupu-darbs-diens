@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+    <div class="jumbotron mt-4" style="background-color: #e9ecef; border-radius: 10px;">
+        <h1>Welcome to Athlete Menu Planner</h1>
+        <p class="lead" style="color: #000000;">Customized nutrition plans for high-performance athletes.</p>
+        <p><a class="btn btn-primary btn-lg" href="/login" role="button">Get Started</a></p>
+    </div>
+
+    <!-- Testimonials Section -->
+<section class="testimonials bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Athlete Success Stories</h2>
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4 mb-3">
+                <div class="card testimonial-card">
+                    <img class="card-img-top" src="static\DALL·E 2024-01-11 21.34.31 - Create a more conventional 16x9 image of an imaginary athlete named 'Athlete Name 1,' with an orange theme. The image should feature a realistic and r.png" alt="Athlete Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Joe Oller</h5>
+                        <p class="card-text">"who is Joe? This meal plan has transformed the way I train and compete. Highly recommend for serious athletes!"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="col-md-4 mb-3">
+                <div class="card testimonial-card">
+                    <img class="card-img-top" src="static/DALL·E 2024-01-11 21.38.11 - Create a realistic 16x9 profile picture with an orange theme for an imaginary athlete named 'James Tatum.' The image should depict a strong and confid.png" alt="Athlete Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">David Jamson</h5>
+                        <p class="card-text">"Thanks to these nutrition plans, I've seen a significant improvement in my performance."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="col-md-4 mb-3">
+                <div class="card testimonial-card">
+                    <img class="card-img-top" src="static/DALL·E 2024-01-11 21.40.38 - Create a realistic 16x9 profile picture with an orange theme, featuring an imaginary athlete named 'Jasmin Spring' in an outdoor yoga setting. The ath.png" alt="Athlete Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Hanna Spring</h5>
+                        <p class="card-text">"The personalized approach made all the difference. I feel stronger and more energized than ever!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Carousel for Menu Plans -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Choose Your Menu Plan</h2>
+        <div class="row">
+    
+            <!-- Free Plan -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Free Plan</div>
+                    <div class="card-body">
+                        <p>Basic nutrition plans suitable for beginners.</p>
+                        <ul>
+                            <li>Standard Meal Options</li>
+                            <li>Basic Nutrition Tips</li>
+                            <!-- More features... -->
+                        </ul>
+                        <button type="button" class="btn btn-primary plan-button" data-plan-name="Free">Show Free Plan</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Active Plan -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Active Plan</div>
+                    <div class="card-body">
+                        <p>Enhanced plans for active athletes.</p>
+                        <ul>
+                            <li>Customizable Meals</li>
+                            <li>Advanced Nutrition Insights</li>
+                            <!-- More features... -->
+                        </ul>
+                        <button type="button" class="btn btn-primary plan-button" data-plan-name="Active">Show Active Plan</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Pro Plan -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">Pro Plan</div>
+                    <div class="card-body">
+                        <p>Comprehensive plans for professional athletes.</p>
+                        <ul>
+                            <li>All Features in Active</li>
+                            <li>One-on-One Nutritionist Support</li>
+                            <!-- More features... -->
+                        </ul>
+                        <button type="button" class="btn btn-primary plan-button" data-plan-name="Pro">Show Pro Plan</button>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <!-- Plan Purchase Modal -->
+    <div class="modal fade" id="planPurchaseModal" tabindex="-1" role="dialog" aria-labelledby="planPurchaseModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="planPurchaseModalLabel">Purchase Plan</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Choose your desired plan and proceed to payment.</p>
+              <!-- Plan Details -->
+              <div class="plan-details">
+                <!-- The details about the plan can be loaded here dynamically using JavaScript if needed -->
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        // Assuming your plan buttons have a class 'plan-button'
+        document.querySelectorAll('.plan-button').forEach(button => {
+          button.addEventListener('click', function() {
+            // You can pass plan-specific details to the modal here, if necessary
+            // For example, using a data attribute like 'data-plan-name'
+            var planName = this.getAttribute('data-plan-name');
+            // Set the modal title or other details based on the plan clicked
+            document.getElementById('planPurchaseModalLabel').innerText = 'Purchase ' + planName + ' Plan';
+            // Show the modal
+            $('#planPurchaseModal').modal('show');
+          });
+        });
+      </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    
+      
+    
+{% endblock %}

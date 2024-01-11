@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Link your custom CSS file -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+<main role="main" class="container">
+    <div class="jumbotron mt-4">
+        <h1 class="display-4">Get Your Custom Menu Plan</h1>
+        <form id="menuForm" method="POST">
+            <div class="form-group">
+                <label for="athleteType">Athlete Type</label>
+                <select class="form-control" id="athleteType" name="athleteType">
+                    <option>Endurance</option>
+                    <option>Strength</option>
+                    <option>Mixed</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="caloric_needs">Caloric Needs</label>
+                <input type="number" class="form-control" name="caloric_needs" id="caloric_needs" placeholder="Enter daily calorie intake">
+            </div>
+            <div class="form-group">
+                <label for="dietaryRestrictions">Dietary Restrictions</label>
+                <input type="text" class="form-control" id="dietaryRestrictions" name="dietaryRestrictions" placeholder="Any dietary restrictions">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+<!-- Loading Screen -->
+<div id="loadingScreen" class="loading-hidden">
+    <p>Loading... </p>
+    <img src="static/yHo-0E.gif" alt="Loading..." class="loading-gif" style="display: block;">
+    
+    <!-- Add more images as needed -->
+</div>
+
+</main>
+<script>
+
+
+</script>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

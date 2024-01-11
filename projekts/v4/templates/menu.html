@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Choose Your Menu Plan</h2>
+    <div class="row">
+
+        <!-- Free Plan -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Free Plan</div>
+                <div class="card-body">
+                    <p>Basic nutrition plans suitable for beginners.</p>
+                    <ul>
+                        <li>Standard Meal Options</li>
+                        <li>Basic Nutrition Tips</li>
+                        <!-- More features... -->
+                    </ul>
+                    <button type="button" class="btn btn-primary plan-button" data-plan-name="Free">Show Free Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Plan -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-success text-white">Active Plan</div>
+                <div class="card-body">
+                    <p>Enhanced plans for active athletes.</p>
+                    <ul>
+                        <li>Customizable Meals</li>
+                        <li>Advanced Nutrition Insights</li>
+                        <!-- More features... -->
+                    </ul>
+                    <button type="button" class="btn btn-primary plan-button" data-plan-name="Active">Show Active Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-dark text-white">Pro Plan</div>
+                <div class="card-body">
+                    <p>Comprehensive plans for professional athletes.</p>
+                    <ul>
+                        <li>All Features in Active</li>
+                        <li>One-on-One Nutritionist Support</li>
+                        <!-- More features... -->
+                    </ul>
+                    <button type="button" class="btn btn-primary plan-button" data-plan-name="Pro">Show Pro Plan</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Plan Purchase Modal -->
+<div class="modal fade" id="planPurchaseModal" tabindex="-1" role="dialog" aria-labelledby="planPurchaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="planPurchaseModalLabel">Purchase Plan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Choose your desired plan and proceed to payment.</p>
+          <!-- Plan Details -->
+          <div class="plan-details">
+            <!-- The details about the plan can be loaded here dynamically using JavaScript if needed -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Assuming your plan buttons have a class 'plan-button'
+    document.querySelectorAll('.plan-button').forEach(button => {
+      button.addEventListener('click', function() {
+        // You can pass plan-specific details to the modal here, if necessary
+        // For example, using a data attribute like 'data-plan-name'
+        var planName = this.getAttribute('data-plan-name');
+        // Set the modal title or other details based on the plan clicked
+        document.getElementById('planPurchaseModalLabel').innerText = 'Purchase ' + planName + ' Plan';
+        // Show the modal
+        $('#planPurchaseModal').modal('show');
+      });
+    });
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+  
+{% endblock %}

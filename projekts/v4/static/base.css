@@ -1,0 +1,35 @@
+
+        
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #ddd;
+        }
+        .footer {
+            background-color: #ff5f6cc3;
+            color: white;
+            margin-bottom: -20px;
+        }
+        .footer .text-muted {
+            color: #ddd;
+        }
+        header {
+            background: url('header-bg.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .footer-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 20px;
+        }

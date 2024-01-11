@@ -1,0 +1,88 @@
+body, html {
+    height: auto; /* This allows the natural flow of the document */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px; /* Space between nav/footer and the form */
+}
+
+.form-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px; /* Control the width of the form */
+    margin-left: auto; /* Center the form horizontally */
+    margin-right: auto; /* Center the form horizontally */
+}
+
+.form-card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-card form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.form-button {
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background: linear-gradient(to right, #662D91, #92278F);
+}
+
+.error {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Body and html styles remain unchanged */
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px; /* Adjust the padding to create space between nav and footer */
+}
+
+.form-card {
+    margin: auto; /* Keeps the card centered in the .container div */
+    max-width: 400px; /* Match the max-width to the login form */
+    /* Other styles remain unchanged */
+}
+
+/* Other styles remain unchanged */
