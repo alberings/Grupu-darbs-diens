@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2>Welcome, {{ user.name }}</h2>
+        <p>This is your profile page.</p>
+
+        
+        <div class="user-info">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Height:</strong> {{ user.height }} cm</p>
+            <p><strong>Weight:</strong> {{ user.weight }} kg</p>
+            <p><strong>Age:</strong> {{ user.age }}</p>
+            <p><strong>Gender:</strong> {{ user.gender }}</p>
+            <p><strong>Activity Level:</strong> {{ user.activity_level }}</p>
+            <p><strong>Dietary Restrictions:</strong> {{ user.dietary_restrictions }}</p>
+            <p><strong>Allergies:</strong> {{ user.allergies }}</p>
+        </div>
+        <div class="container mt-4">
+            <h2>Your Weekly Menu Plan</h2>
+            {% if menu_plan %}
+            {% for day, meals in menu_plan.items() %}
+                <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{ day }}-menu" aria-expanded="false" aria-controls="{{ day }}-menu">
+                        Show {{ day }}'s Menu
+                    </button>
+                </p>
+                <div class="collapse" id="{{ day }}-menu">
+                    <div class="card card-body">
+                        <h3>{{ day }}</h3>
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Meal</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Calories</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Breakfast</th>
+                                    <td>{{ meals['Breakfast']['description'] }}</td>
+                                    <td>{{ meals['Breakfast']['calories'] }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Lunch</th>
+                                    <td>{{ meals['Lunch']['description'] }}</td>
+                                    <td>{{ meals['Lunch']['calories'] }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dinner</th>
+                                    <td>{{ meals['Dinner']['description'] }}</td>
+                                    <td>{{ meals['Dinner']['calories'] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            {% endfor %}
+            {% else %}
+            <p>No menu plan yet!</p>
+        {% endif %}
+        </div>
+        <a href="{{ url_for('edit_profile') }}" class="btn btn-secondary">Edit Profile</a>
+
+        <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+/* styles.css */
+
+/* Add custom styles to the jumbotron */
+.jumbotron {
+    background-color: #929eaa95;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style submit button */
+.btn-primary {
+    background-color: #a7d6b8cf;
+    border: black 1px;
+}
+
+/* Add more custom styles as needed */
+.nutrition-tips-container .nutrition-header {
+    background-color: #007bff; /* Blue shade for header */
+    color: white;
+}
+
+.tip-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for tip sections */
+    border-radius: 10px;
+}
+
+.tip-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tip-section h3 {
+    color: #007bff; /* Blue shade for headings */
+    margin-top: 20px;
+}
+.card-header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-body ul li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.card-body ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: green;
+}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Choose Your Menu Plan</h2>
+    <div class="row">
+
+        <!-- Free Plan -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Free Plan</div>
+                <div class="card-body">
+                    <p>Basic nutrition plans suitable for beginners.</p>
+                    <ul>
+                        <li>Standard Meal Options</li>
+                        <li>Basic Nutrition Tips</li>
+                        <!-- More features... -->
+                    </ul>
+                    <a href="/signup-free" class="btn btn-primary">Choose Free</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Plan -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-success text-white">Active Plan</div>
+                <div class="card-body">
+                    <p>Enhanced plans for active athletes.</p>
+                    <ul>
+                        <li>Customizable Meals</li>
+                        <li>Advanced Nutrition Insights</li>
+                        <!-- More features... -->
+                    </ul>
+                    <a href="/signup-active" class="btn btn-success">Choose Active</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-dark text-white">Pro Plan</div>
+                <div class="card-body">
+                    <p>Comprehensive plans for professional athletes.</p>
+                    <ul>
+                        <li>All Features in Active</li>
+                        <li>One-on-One Nutritionist Support</li>
+                        <!-- More features... -->
+                    </ul>
+                    <a href="/signup-pro" class="btn btn-dark">Choose Pro</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
