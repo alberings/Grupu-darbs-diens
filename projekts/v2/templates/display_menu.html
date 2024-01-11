@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Your Weekly Menu Plan</h2>
+    {% for day, meals in menu_plan.items() %}
+        <h3>{{ day }}</h3>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Meal</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Breakfast</th>
+                    <td>{{ meals['Breakfast']['description'] }}</td>
+                    <td>{{ meals['Breakfast']['calories'] }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lunch</th>
+                    <td>{{ meals['Lunch']['description'] }}</td>
+                    <td>{{ meals['Lunch']['calories'] }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Dinner</th>
+                    <td>{{ meals['Dinner']['description'] }}</td>
+                    <td>{{ meals['Dinner']['calories'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    {% endfor %}
+</div>
+{% endblock %}
