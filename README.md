@@ -1,4 +1,5 @@
 # Grupu-darbs-diens
+![image](https://github.com/alberings/Grupu-darbs-diens/assets/71380595/d9f75473-9470-4a1f-93b1-d8a9c26dac4b)
 
 # Projekta lejupielādēšna lokāli
 Projekts: https://github.com/alberings/Grupu-darbs-diens.git
