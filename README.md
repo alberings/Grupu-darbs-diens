@@ -9,6 +9,8 @@ cd v4
 
 # Vajadzīgo package instalācija
 Failā requirements.txt var redzēt visas izmantotās 
+![image](https://github.com/alberings/Grupu-darbs-diens/assets/71380595/15f66d8c-b719-4910-ac77-11994aabf4dd)
+
 
 # Tad ja viss ir ieinstalēts
 Tad vajadzētu varēt palaist programu ar "python app.py"
